@@ -8,7 +8,7 @@
                   <h3>Telephone</h3>
                   <p><a href="tel:07862707907">07862 707 907</a></p>
                   <h3>Email</h3>
-                  <p><a href="mailto:bosco@seabo.co.uk">Bosco@.co.uk</a></p>
+                  <p><a href="mailto:bosco@seabo.co.uk">eastantrimremovals@gmail</a></p>
             </div>
 
             </div>
