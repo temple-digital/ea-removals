@@ -21,6 +21,7 @@ if( have_rows('layouts') ):
 ?>
 
 <section class="section section--full-bleed align--left active">
+    <div class="container">
       <div class="full-bleed bg--cover" style="background-image: url('<?php echo $background_image['url']; ?>');">
         <div class="display-table">
           <div class="display-table-cell">
@@ -32,7 +33,8 @@ if( have_rows('layouts') ):
           </div>
         </div>
       </div>
-    </section>
+    </div>
+</section>
 <?php endif; ?>
 
 <?php
@@ -49,13 +51,13 @@ if( have_rows('layouts') ):
                 $title = $service['text'];
                 $link = $service['link'];
                 ?>
-                <div class="service-item col--33">
+                <div class="service-item col--25">
                     <div class="image-wrapper">
                         <div class="image bg--cover" style="background-image: url('<?php echo $image; ?>');">
                         </div>
                         <div class="text">
                             <h2><?php echo $title; ?></h2>
-                            <?php echo(!$link) ? '<a class="btn btn--primary" href="' . $link . '">Read More</a>' : ''; ?>
+                            <?php /* echo(!$link) ? '<a class="btn btn--primary" href="' . $link . '">Read More</a>' : ''; */?>
                         </div>
                     </div>
                 </div>
@@ -118,7 +120,7 @@ if( have_rows('layouts') ):
         $css_class = get_sub_field('css_class');
 ?>
 
-<section class="section section--content-block">
+<section class="section section--content-block section--content-block-image">
     <div class="container">
         <?php foreach ($content as $c) : 
             $background_image = $c['background_image']['sizes']['square640'];
@@ -147,13 +149,13 @@ if( have_rows('layouts') ):
         $css_class = get_sub_field('css_class');
 ?>
 
-<section class="section section--content-block section--content-block-image">
+<section class="section section--content-block">
     <div class="container">
         <?php foreach ($content as $c) : 
             $title = $c['title'];
             $text = $c['text'];
         ?>
-        <div class="flex-wrapper">
+        <div class="col-wrapper clearfix">
             <div class="col--50">
             <div class="text">
                     <h2><?php echo $title; ?></h2>
@@ -205,7 +207,7 @@ $post_items = new WP_Query( $args );
                         </div>
                         <div class="text">
                             <h3><?php echo $title; ?></h3>
-                            <?php echo($link) ? '<span class="btn btn--primary">Read More</span>' : ''; ?>
+                            <?php /* echo($link) ? '<span class="btn btn--primary">Read More</span>' : ''; */?>
                         </div>
                     </div>
                     <?php echo($link) ? '</a>' : ''; ?>

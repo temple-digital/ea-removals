@@ -16,6 +16,7 @@ $twitter = get_field('tel', 'twitter_link');
 
     <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900i&display=swap" rel="stylesheet">
 
     <?php wp_head(); ?>
     <script type="text/javascript">
