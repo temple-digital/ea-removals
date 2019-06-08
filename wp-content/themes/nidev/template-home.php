@@ -20,19 +20,9 @@ if( have_rows('layouts') ):
     $text = get_sub_field('text');
 ?>
 
-<section class="section section--full-bleed align--left active">
+<section class="section section--hero align--left active">
     <div class="container">
-      <div class="full-bleed bg--cover" style="background-image: url('<?php echo $background_image['url']; ?>');">
-        <div class="display-table">
-          <div class="display-table-cell">
-            <div class="container">
-              <div class="text">
-                <?php echo ($text) ? $text : ''; ?>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="image full-bleed bg--cover" style="background-image: url('<?php echo $background_image['url']; ?>');"></div>
     </div>
 </section>
 <?php endif; ?>
@@ -227,6 +217,19 @@ $post_items = new WP_Query( $args );
 
 endif;
 ?>
+
+
+<section class="section bg--grey">
+    <div class="container">
+        <div class="col-wrapper clearfix">
+            <div class="col--100 align--center">
+                <h3>
+                    Testimonials here
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
