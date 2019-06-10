@@ -20,7 +20,7 @@
                   </div>
 
                   <div class="col--33 align-center">
-                      <h3>Contact</h3>
+                      <h3>Get In Touch</h3>
                       <p>T: <a href="tel:07862707907">07862 707 907</a></p>
                       <p>E: <a href="mailto:eastantrimremovals@gmail.com.co.uk">eastantrimremovals@gmail.com</a></p>
                       <p><a href="/privacy-policy">Privacy Policy</a></p>

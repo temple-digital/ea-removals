@@ -18,11 +18,12 @@ if( have_rows('layouts') ):
 <?php if( get_row_layout() == 'hero' ):
     $background_image = get_sub_field('background_image');
     $text = get_sub_field('text');
+    $section_id = get_sub_field('id');
 ?>
 
-<section class="section section--hero align--left active">
+<section class="section section--hero align--left active" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
     <div class="container">
-      <div class="image full-bleed bg--cover" style="background-image: url('<?php echo $background_image['url']; ?>');"></div>
+        <div class="image full-bleed bg--cover" style="background-image: url('<?php echo $background_image['url']; ?>');"></div>
     </div>
 </section>
 <?php endif; ?>
@@ -31,8 +32,9 @@ if( have_rows('layouts') ):
     if( get_row_layout() == 'services' ):
         $padding = get_sub_field('padding');
         $services = get_sub_field('content');
+        $section_id = get_sub_field('id');
 ?>
-<section class="section section--services <?php echo ($padding) ? $padding : 'no-top-padding'; ?> bg--white">
+<section class="section section--services <?php echo ($padding) ? $padding : 'no-top-padding'; ?> bg--white" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
         <div class="container">
             <div class="col-wrapper clearfix">
 
@@ -62,11 +64,12 @@ if( have_rows('layouts') ):
     if( get_row_layout() == 'featured_posts' ):
         $padding = get_sub_field('padding');
         $posts = get_sub_field('posts');
+        $section_id = get_sub_field('id');
 
         // wp_enqueue_script( 'owlcarousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '1.0', TRUE );
 ?>
 
-        <section class="section section--featured-posts <?php echo ($padding) ? $padding : 'no-top-padding'; ?> bg--white">
+        <section class="section section--featured-posts <?php echo ($padding) ? $padding : 'no-top-padding'; ?> bg--white" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
             <div class="container">
                 <div class="col-wrapper clearfix">
                     <div class="owl-carousel">
@@ -108,9 +111,10 @@ if( have_rows('layouts') ):
     if( get_row_layout() == 'content_block' ):
         $content = get_sub_field('content');
         $css_class = get_sub_field('css_class');
+        $section_id = get_sub_field('id');
 ?>
 
-<section class="section section--content-block section--content-block-image">
+<section class="section section--content-block section--content-block-image" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
     <div class="container">
         <?php foreach ($content as $c) : 
             $background_image = $c['background_image']['sizes']['square640'];
@@ -118,7 +122,7 @@ if( have_rows('layouts') ):
         ?>
         <div class="flex-wrapper">
             <div class="col--50">
-                <div class="image bg--cover" style="background-image: url('<?php echo $background_image; ?>');">
+                <div class="image bg--cover" style="background-image: url('<?php echo $background_image; ?>');" <?php echo($section_id) ? $section_id  : '' ; ?>>
                 </div>
             </div>
             <div class="col--50">
@@ -137,9 +141,10 @@ if( have_rows('layouts') ):
     if( get_row_layout() == 'content_block_text' ):
         $content = get_sub_field('content');
         $css_class = get_sub_field('css_class');
+        $section_id = get_sub_field('id');
 ?>
 
-<section class="section section--content-block">
+<section class="section section--content-block" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
     <div class="container">
         <?php foreach ($content as $c) : 
             $title = $c['title'];
@@ -167,6 +172,7 @@ if( have_rows('layouts') ):
 
 if( get_row_layout() == 'recent_posts' ):
     $css_class = get_sub_field('css_class');
+    $section_id = get_sub_field('id');
 
 $args = array(
 	'posts_per_page' => 4
@@ -174,7 +180,7 @@ $args = array(
 $post_items = new WP_Query( $args );
 
 ?>
-<section class="section section--recent-posts bg--grey">
+<section class="section section--recent-posts bg--grey" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
     <div class="container">
         <div class="col-wrapper clearfix">
             <div class="col--100 align--right">
@@ -212,25 +218,46 @@ $post_items = new WP_Query( $args );
 <?php endif; ?>
 
 <?php
+    if( get_row_layout() == 'testimonials' ):
+        $padding = get_sub_field('padding');
+        $testimonials = get_sub_field('content');
+        $section_id = get_sub_field('id');
+?>
+<section class="section section--testimonials <?php echo ($padding) ? $padding : 'no-top-padding'; ?> bg--white" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
+        <div class="container container--small">
+            <div class="col-wrapper clearfix">
+
+            <?php foreach( $testimonials as $testimonial ):
+                $name = $testimonial['name'];
+                $quote = $testimonial['quote'];
+                ?>
+                <div class="logo col--20">
+                    <img src="http://ea-removals.local/wp-content/uploads/2019/05/boxes-640x640.jpg" />
+                </div>
+                <div class="testimonial col--80">
+                    <div class="text align--left">
+                        <h3><?php echo $name; ?></h3>
+                        <?php echo $quote; ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+
+        </div>
+    </div>
+</section>
+
+<?php endif; ?>
+
+
+<!-- // END Flex Grid // -->
+
+
+<?php
 
     endwhile;
 
 endif;
 ?>
-
-
-<section class="section bg--grey">
-    <div class="container">
-        <div class="col-wrapper clearfix">
-            <div class="col--100 align--center">
-                <h3>
-                    Testimonials here
-                </h3>
-            </div>
-        </div>
-    </div>
-</section>
-
 
 
 <?php

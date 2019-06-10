@@ -210,6 +210,20 @@ blockquote p { display: inline; }
     margin: 0 auto;
 }
 
+.container--small {
+    width: 100%;
+    max-width: 900px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.container--large {
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
 .flex-wrapper {
     display: flex;
     justify-content: flex-start;
@@ -326,7 +340,6 @@ blockquote p { display: inline; }
 
 @media all and (max-width: 639px) {
     .container { padding: 0 30px; }
-    .section{ padding: 20px 0; }
 }
 
 .no-padding { padding: 0; }
@@ -704,7 +717,8 @@ blockquote p { display: inline; }
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 80px;
+        padding: 50px;
+        
 
         h2{
             color: #fff;
@@ -776,10 +790,6 @@ blockquote p { display: inline; }
 
     .section--services{
         background-color: transparent;
-    
-        .col-wrapper{
-            margin: 0;
-        }
     }
 }
 
@@ -955,6 +965,14 @@ blockquote p { display: inline; }
 }
 
 
+/* #section #Testimonial
+============================================ */
+
+.section--testimonial{
+
+}
+
+
 
 
 /* #section #CTA
@@ -1037,7 +1055,7 @@ blockquote p { display: inline; }
 
 .footer h3 {
     font-size: 1.6em;
-    color: #fff;
+    color: rgba(255,255,255,0.5);
     margin-bottom: 20px;
 }
 

@@ -45,8 +45,8 @@ $twitter = get_field('tel', 'twitter_link');
               <ul id="menu-menu-1" class="menu">
                 <li class="menu-item"><a href="#overview" class="">Overview</a></li>
                 <li class="menu-item"><a href="#services" class="">Services</a></li>
-                <li class="menu-item"><a href="#our-commitment" class="">Our Commitment</a></li>
-                <li class="menu-item"><a href="#contact">Contact</a></li>
+                <li class="menu-item"><a href="#testimonials" class="">Testimonials</a></li>
+                <li class="menu-item"><a href="/contact">Contact</a></li>
               </ul>
             </div>
           </nav>
