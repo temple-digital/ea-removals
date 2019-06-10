@@ -222,19 +222,22 @@ $post_items = new WP_Query( $args );
         $padding = get_sub_field('padding');
         $testimonials = get_sub_field('content');
         $section_id = get_sub_field('id');
+
+       if ($testimonials && count($testimonials) > 1) {
+            wp_enqueue_script( 'royalslider', get_template_directory_uri() . '/js/royalslider.min.js', array(), '1.0', TRUE );
+       }
+
 ?>
-<section class="section section--testimonials <?php echo ($padding) ? $padding : 'no-top-padding'; ?> bg--white" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
+<section class="section section--testimonials <?php echo ($padding) ? $padding : ''; ?> bg--grey" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
         <div class="container container--small">
-            <div class="col-wrapper clearfix">
+            <div class="col-wrapper clearfix testimonial-slider"<?php echo ($testimonials && count($testimonials) > 1) ? ' data-js-var="' . $js_var . '"': ''; ?>>
 
             <?php foreach( $testimonials as $testimonial ):
                 $name = $testimonial['name'];
                 $quote = $testimonial['quote'];
                 ?>
-                <div class="logo col--20">
-                    <img src="http://ea-removals.local/wp-content/uploads/2019/05/boxes-640x640.jpg" />
-                </div>
-                <div class="testimonial col--80">
+                <div class="testimonial col--100">
+                <!-- <img src="http://ea-removals.local/wp-content/uploads/2019/05/boxes-640x640.jpg" /> -->
                     <div class="text align--left">
                         <h3><?php echo $name; ?></h3>
                         <?php echo $quote; ?>
