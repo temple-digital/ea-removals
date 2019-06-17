@@ -25,6 +25,15 @@ $twitter = get_field('tel', 'twitter_link');
         var theme_url = '<?php echo bloginfo('template_url'); ?>';
     </script>
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5VLM8FM');</script>
+    <!-- End Google Tag Manager -->
+
+
 </head>
 <body <?php body_class(); ?>>
 
@@ -46,7 +55,7 @@ $twitter = get_field('tel', 'twitter_link');
                 <li class="menu-item"><a href="#overview" class="">Overview</a></li>
                 <li class="menu-item"><a href="#services" class="">Services</a></li>
                 <li class="menu-item"><a href="#testimonials" class="">Testimonials</a></li>
-                <li class="menu-item"><a href="/contact">Contact</a></li>
+                <li class="menu-item"><a href="/contact" class="call-tracking">Contact</a></li>
               </ul>
             </div>
           </nav>

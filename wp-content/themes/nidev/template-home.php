@@ -237,7 +237,7 @@ $post_items = new WP_Query( $args );
                 $quote = $testimonial['quote'];
                 ?>
                 <div class="testimonial col--100">
-                <!-- <img src="http://ea-removals.local/wp-content/uploads/2019/05/boxes-640x640.jpg" /> -->
+                <img src="http://ea-removals.local/wp-content/uploads/2019/05/boxes-640x640.jpg" />
                     <div class="text align--left">
                         <h3><?php echo $name; ?></h3>
                         <?php echo $quote; ?>
