@@ -26,6 +26,9 @@ if( have_rows('layouts') ):
 <section class="section section--hero align--left active <?php echo ($padding) ? $padding : ''; ?>" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
     <div class="container container--<?php echo ($container) ? $container : ''; ?>">
         <div class="image full-bleed bg--cover" style="background-image: url('<?php echo $background_image['url']; ?>');"></div>
+        <div class="text">
+            
+        </div>
     </div>
 </section>
 <?php endif; ?>
@@ -37,8 +40,14 @@ if( have_rows('layouts') ):
         $services = get_sub_field('content');
         $section_id = get_sub_field('id');
 ?>
-<section class="section section--services <?php echo ($padding) ? $padding : ''; ?> bg--white" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
-        <div class="container container--<?php echo ($container) ? $container : ''; ?>">
+<section class="section section--services <?php echo ($padding) ? $padding : ''; ?> bg--grey" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
+        <div class="container container--small">
+            <div class="section-heading">
+                <h2>Our Services</h2>
+            </div>
+        </div>
+
+        <div class="container container--<?php echo ($container) ? $container : ''; ?> container--scroll">
             <div class="flex-wrapper">
 
             <?php foreach( $services as $service ):
@@ -161,7 +170,7 @@ if( have_rows('layouts') ):
         <div class="col-wrapper clearfix">
             <div class="col--50">
             <div class="text">
-                    <h2><?php echo $title; ?></h2>
+                    <h1><?php echo $title; ?></h1>
                 </div>
             </div>
             <div class="col--50">
@@ -239,7 +248,7 @@ $post_items = new WP_Query( $args );
        }
 
 ?>
-<section class="section section--testimonials <?php echo ($padding) ? $padding : ''; ?> bg--grey" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
+<section class="section section--testimonials <?php echo ($padding) ? $padding : ''; ?> bg--white" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
 
     <div class="container container--<?php echo ($container) ? $container : ''; ?>">
         <div class="flex-wrapper">

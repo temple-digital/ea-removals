@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
 }
 
-h1 { font-size: 5em;}
+h1 { font-size: 3em;}
 h2 { font-size: 3em;}
 h3 { font-size: 1.8em; }
 h4 { font-size: 1.6em; color: #D2D7D3; }
@@ -180,12 +180,12 @@ blockquote p { display: inline; }
 /* Typography - Media Queries */
 
 @media all and (max-width: 1250px) {
-    h1 { font-size: 3em; }
+    h1, h2 { font-size: 2.8em; }
 }
 
 @media all and (max-width: 767px) {
     h1, h2, h3, h4, h5, h6 { margin-bottom: 20px; }
-    h1 { font-size: 2.5em; }
+    h1, h2 { font-size: 2.2em; }
     p { font-size: 1.6em; }
 }
 
@@ -223,6 +223,10 @@ blockquote p { display: inline; }
     max-width: 1600px;
     padding: 0 30px;
     margin: 0 auto;
+}
+
+.container--scroll{
+    overflow-x: scroll;
 }
 
 .flex-wrapper {
@@ -350,6 +354,16 @@ blockquote p { display: inline; }
 
 
 
+.section-heading{
+    margin-bottom: 80px;
+}
+
+@media all and (max-width: 1023px) {
+    .section-heading{
+        margin-bottom: 40px;
+    }
+}
+
 
 
 
@@ -385,10 +399,13 @@ blockquote p { display: inline; }
             &:after{
                 content: '';
                 display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
                 height: 3px;
                 width: 0;
                 background: transparent;
-                transition: width .3s ease, background-color .3s ease;
+                transition: width .2s ease, background-color .2s ease;
             }
 
             &:hover{
@@ -784,12 +801,7 @@ blockquote p { display: inline; }
 ============================================ */
 
 .section--services{
-    background-color: transparent;
     z-index: 20;
-
-    .container{
-        overflow-x: scroll;
-    }
 
     .flex-wrapper{
         margin: 0 -10px;
@@ -923,14 +935,6 @@ blockquote p { display: inline; }
         }
     }
 
-}
-
-
-@media all and (max-width: 1023px) {
-
-    .section--services{
-        background-color: transparent;
-    }
 }
 
 
