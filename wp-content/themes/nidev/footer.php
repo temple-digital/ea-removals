@@ -28,7 +28,7 @@
       </div>
       <div class="copyright">
           <div class="container">
-              <p>©<?php echo date("Y"); ?> East Antrim Removals | Site by BT3 Digital</p>
+              <p>©<?php echo date("Y"); ?> East Antrim Removals | Site by Lewis Alexander.</p>
           </div>
       </div>
   </footer>

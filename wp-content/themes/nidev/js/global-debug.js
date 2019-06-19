@@ -24,6 +24,16 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    // Blocker
+    $('.blocker').on('click touchmove', function (e) {
+        e.preventDefault();
+        $('body, .header').off('touchmove');
+        $('html').removeClass('nav-open');
+        setTimeout(function () {
+            $('html').removeClass('nav-opened');
+        }, 250);
+    });
+
 
     //Basic #Anchor #smooth #scroll
     $('a[href^="#"]').on('click', function(event) {

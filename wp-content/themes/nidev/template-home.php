@@ -17,12 +17,14 @@ if( have_rows('layouts') ):
 
 <?php if( get_row_layout() == 'hero' ):
     $background_image = get_sub_field('background_image');
+    $padding = get_sub_field('padding');
+    $container = get_sub_field('container');
     $text = get_sub_field('text');
     $section_id = get_sub_field('id');
 ?>
 
-<section class="section section--hero align--left active" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
-    <div class="container">
+<section class="section section--hero align--left active <?php echo ($padding) ? $padding : ''; ?>" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
+    <div class="container container--<?php echo ($container) ? $container : ''; ?>">
         <div class="image full-bleed bg--cover" style="background-image: url('<?php echo $background_image['url']; ?>');"></div>
     </div>
 </section>
@@ -31,12 +33,13 @@ if( have_rows('layouts') ):
 <?php
     if( get_row_layout() == 'services' ):
         $padding = get_sub_field('padding');
+        $container = get_sub_field('container');
         $services = get_sub_field('content');
         $section_id = get_sub_field('id');
 ?>
-<section class="section section--services <?php echo ($padding) ? $padding : 'no-top-padding'; ?> bg--white" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
-        <div class="container">
-            <div class="col-wrapper clearfix">
+<section class="section section--services <?php echo ($padding) ? $padding : ''; ?> bg--white" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
+        <div class="container container--<?php echo ($container) ? $container : ''; ?>">
+            <div class="flex-wrapper">
 
             <?php foreach( $services as $service ):
                 $image = $service['background_image']['sizes']['square640'];
@@ -65,12 +68,12 @@ if( have_rows('layouts') ):
         $padding = get_sub_field('padding');
         $posts = get_sub_field('posts');
         $section_id = get_sub_field('id');
-
+        $container = get_sub_field('container');
         // wp_enqueue_script( 'owlcarousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '1.0', TRUE );
 ?>
 
         <section class="section section--featured-posts <?php echo ($padding) ? $padding : 'no-top-padding'; ?> bg--white" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
-            <div class="container">
+            <div class="container container--<?php echo ($container) ? $container : ''; ?>">
                 <div class="col-wrapper clearfix">
                     <div class="owl-carousel">
 
@@ -110,12 +113,15 @@ if( have_rows('layouts') ):
 <?php
     if( get_row_layout() == 'content_block' ):
         $content = get_sub_field('content');
+        $padding = get_sub_field('padding');
+        $container = get_sub_field('container');
         $css_class = get_sub_field('css_class');
         $section_id = get_sub_field('id');
 ?>
 
-<section class="section section--content-block section--content-block-image" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
-    <div class="container">
+<section class="section section--content-block section--content-block-image <?php echo ($padding) ? $padding : ''; ?>" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
+
+    <div class="container container--<?php echo ($container) ? $container : ''; ?>">
         <?php foreach ($content as $c) : 
             $background_image = $c['background_image']['sizes']['square640'];
             $text = $c['text'];
@@ -139,13 +145,15 @@ if( have_rows('layouts') ):
 
 <?php
     if( get_row_layout() == 'content_block_text' ):
+        $padding = get_sub_field('padding');
+        $container = get_sub_field('container');
         $content = get_sub_field('content');
         $css_class = get_sub_field('css_class');
         $section_id = get_sub_field('id');
 ?>
 
-<section class="section section--content-block" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
-    <div class="container">
+<section class="section section--content-block <?php echo ($padding) ? $padding : ''; ?>" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
+    <div class="container container--<?php echo ($container) ? $container : ''; ?>">
         <?php foreach ($content as $c) : 
             $title = $c['title'];
             $text = $c['text'];
@@ -171,6 +179,8 @@ if( have_rows('layouts') ):
 <?php 
 
 if( get_row_layout() == 'recent_posts' ):
+    $padding = get_sub_field('padding');
+    $container = get_sub_field('container');
     $css_class = get_sub_field('css_class');
     $section_id = get_sub_field('id');
 
@@ -180,8 +190,8 @@ $args = array(
 $post_items = new WP_Query( $args );
 
 ?>
-<section class="section section--recent-posts bg--grey" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
-    <div class="container">
+<section class="section section--recent-posts bg--grey <?php echo ($padding) ? $padding : ''; ?>" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
+    <div class="container container--<?php echo ($container) ? $container : ''; ?>">
         <div class="col-wrapper clearfix">
             <div class="col--100 align--right">
                 <h2>Our Blog</h2>
@@ -220,6 +230,7 @@ $post_items = new WP_Query( $args );
 <?php
     if( get_row_layout() == 'testimonials' ):
         $padding = get_sub_field('padding');
+        $container = get_sub_field('container');
         $testimonials = get_sub_field('content');
         $section_id = get_sub_field('id');
 
@@ -229,7 +240,8 @@ $post_items = new WP_Query( $args );
 
 ?>
 <section class="section section--testimonials <?php echo ($padding) ? $padding : ''; ?> bg--grey" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
-    <div class="container container--small">
+
+    <div class="container container--<?php echo ($container) ? $container : ''; ?>">
         <div class="flex-wrapper">
 
             <div class="col--33">
