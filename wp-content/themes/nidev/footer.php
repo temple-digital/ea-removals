@@ -4,7 +4,7 @@
           <div class="container">
               <div class="col-wrapper clearfix">
 
-                  <div class="col--33 align-center">
+                  <div class="col--50 align-center">
                       <nav class="footer-nav">
                           <ul class="footer-menu">
                               <h3>Quick Links</h3>
@@ -16,10 +16,7 @@
                       </nav>
                   </div>
 
-                  <div class="col--33 align-center">
-                  </div>
-
-                  <div class="col--33 align-center">
+                  <div class="col--50 align-center">
                       <h3>Get In Touch</h3>
                       <p>T: <a href="tel:07862707907">07862 707 907</a></p>
                       <p>E: <a href="mailto:eastantrimremovals@gmail.com.co.uk">eastantrimremovals@gmail.com</a></p>

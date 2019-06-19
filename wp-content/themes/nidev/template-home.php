@@ -229,22 +229,27 @@ $post_items = new WP_Query( $args );
 
 ?>
 <section class="section section--testimonials <?php echo ($padding) ? $padding : ''; ?> bg--grey" <?php echo($section_id) ? 'id="' . $section_id . '"' : '' ; ?>>
-        <div class="container container--small">
-            <div class="col-wrapper clearfix testimonial-slider"<?php echo ($testimonials && count($testimonials) > 1) ? ' data-js-var="' . $js_var . '"': ''; ?>>
+    <div class="container container--small">
+        <div class="flex-wrapper">
+
+            <div class="col--33">
+                <img src="<?php echo bloginfo('template_url'); ?>/images/google-reviews.png" />
+            </div>
+            
+            <div class="col--66 testimonial-slider"<?php echo ($testimonials && count($testimonials) > 1) ? ' data-js-var="' . $js_var . '"': ''; ?>>
 
             <?php foreach( $testimonials as $testimonial ):
                 $name = $testimonial['name'];
                 $quote = $testimonial['quote'];
                 ?>
-                <div class="testimonial col--100">
-                <img src="http://ea-removals.local/wp-content/uploads/2019/05/boxes-640x640.jpg" />
+                <div class="testimonial">
                     <div class="text align--left">
-                        <h3><?php echo $name; ?></h3>
                         <?php echo $quote; ?>
+                        <h3><?php echo $name; ?></h3>
                     </div>
                 </div>
             <?php endforeach; ?>
-
+            </div>
         </div>
     </div>
 </section>

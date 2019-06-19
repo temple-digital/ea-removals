@@ -968,8 +968,49 @@ blockquote p { display: inline; }
 /* #section #Testimonial
 ============================================ */
 
-.section--testimonial{
+.section--testimonials{
 
+    img{
+        max-width: 200px;
+    }
+
+    h3{
+        font-size: 16px;
+        color: #666;
+    }
+
+}
+
+
+@media all and (max-width: 639px) {
+
+    .section--testimonials{
+        text-align: center;
+
+        [class^="col--"],
+        [class*=" col--"] {
+
+            order: 1;
+    
+            &:first-child{
+                order: 2
+            }
+        }
+
+        .testimonial-slider{
+            margin-bottom: 20px;
+        }
+
+        .text{
+            text-align: center
+        }
+
+        img{
+            max-width: 120px;
+        }
+
+    }
+    
 }
 
 
