@@ -1,4 +1,25 @@
+<?php 
+	$telephone = get_field('telephone', 'option');
+    $email = get_field('email', 'option');
+?>
 
+<div class="contact-details">
+    <ul>
+        <li><?php echo $name; ?></li>
+        <li><?php echo $role; ?></li>
+    </ul>
+    
+    <ul>
+        <li><span>T: </span><a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a></li>
+        <li><span>E: </span><a href="mailto:<?php echo $email; ?>?subject=Removal enquiry from Website""><?php echo $email; ?></a></li>
+    </ul>
+
+    <ul>
+        <li><span>FB: </span><a href="https://<?php echo $messenger; ?>" target="_blank">Facebook Messenger</a></li>
+    </ul>
+</div>
+  
+  
   <footer class="footer">
       <div class="top">
           <div class="container">
@@ -18,8 +39,8 @@
 
                   <div class="col--50 align-center">
                       <h3>Get In Touch</h3>
-                      <p>T: <a href="tel:07826707907">07826 707907</a></p>
-                      <p>E: <a href="mailto:eastantrimremovals@gmail.com.co.uk">eastantrimremovals@gmail.com</a></p>
+                      <p>T: <a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a></p>
+                      <p>E: <a href="mailto:<?php echo $email; ?>?subject=Removal enquiry from Website"><?php echo $email; ?></a></p>
                       <p><a href="/privacy-policy">Privacy Policy</a></p>
                   </div>
 

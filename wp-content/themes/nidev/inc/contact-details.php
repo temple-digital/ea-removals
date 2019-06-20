@@ -17,7 +17,7 @@
     
     <ul>
         <li><span>T: </span><a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a></li>
-        <li><span>E: </span><a href="mailto:<?php echo $email; ?>?subject=Removal enquiry from Website""><?php echo $email; ?></a></li>
+        <li><span>E: </span><a href="mailto:<?php echo $email; ?>?subject=Removal enquiry from Website><?php echo $email; ?></a></li>
     </ul>
 
     <ul>
