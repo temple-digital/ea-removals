@@ -1198,8 +1198,32 @@ blockquote p { display: inline; }
 
 
 
-/* #Footer
+/* #COntact Details
 ============================================ */
+
+.contact-details{
+
+
+    ul{
+        margin: 0;
+        margin-bottom: 30px;
+
+        li{
+            list-style: none;
+            line-height: 1;
+            margin-bottom: 10px;
+
+            a{
+                text-decoration: none;
+                color: #666;
+            }
+        }
+
+        &:last-child{
+            margin-bottom:0;
+        }
+    }
+}
 
 /* #Footer
 ============================================ */
@@ -1272,7 +1296,7 @@ blockquote p { display: inline; }
         width: 100%;
 
         &:first-child{
-            margin-bottom: 50px;
+            display: none;
         }
     }
 

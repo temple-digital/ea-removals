@@ -17,3 +17,5 @@ add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 locate_template('functions/custom-post-types.php', TRUE);
 
 locate_template('functions/custom-front-end.php', TRUE);
+
+locate_template('functions/custom-shortcodes.php', TRUE);

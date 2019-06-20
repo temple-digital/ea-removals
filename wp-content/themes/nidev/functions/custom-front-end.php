@@ -36,3 +36,11 @@ function button_shortcode($atts) {
   return $return;
 }
 add_shortcode('button', 'button_shortcode');
+
+// ACF Options
+if (function_exists('acf_add_options_sub_page')) {
+  acf_add_options_sub_page('Contact Details');
+}
+if (function_exists('acf_set_options_page_title')) {
+  acf_set_options_page_title(('Global Options'));
+}

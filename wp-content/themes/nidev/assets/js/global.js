@@ -41,7 +41,7 @@ jQuery(document).ready(function ($) {
         if( target.length ) {
     
             $('html, body').stop().animate({
-                scrollTop: target.offset().top - 90
+                scrollTop: target.offset().top - 130
             }, 1000);
 
             return false;

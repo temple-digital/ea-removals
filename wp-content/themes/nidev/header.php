@@ -42,12 +42,27 @@ $twitter = get_field('tel', 'twitter_link');
 
           <nav class="header-nav">
             <div class="menu clearfix">
+
+            <?php if(is_front_page()) { ?>
+
               <ul id="menu-menu-1" class="menu">
                 <li class="menu-item"><a href="#overview" class="">Overview</a></li>
                 <li class="menu-item"><a href="#services" class="">Services</a></li>
                 <li class="menu-item"><a href="#testimonials" class="">Testimonials</a></li>
+                <li class="menu-item"><a href="contact" class="call-tracking">Contact</a></li>
+              </ul>
+
+            <?php }else { ?>
+
+              <ul id="menu-menu-1" class="menu">
+                <li class="menu-item"><a href="/#overview" class="">Overview</a></li>
+                <li class="menu-item"><a href="/#services" class="">Services</a></li>
+                <li class="menu-item"><a href="/#testimonials" class="">Testimonials</a></li>
                 <li class="menu-item"><a href="/contact" class="call-tracking">Contact</a></li>
               </ul>
+
+              <?php } ?>
+
             </div>
           </nav>
 
