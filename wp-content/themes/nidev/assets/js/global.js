@@ -5,6 +5,7 @@ jQuery(document).ready(function ($) {
         $('html').toggleClass('nav-open');
         setTimeout(function () {
             $('html').toggleClass('nav-opened');
+            console.log('Btn click');
 
             $('body').on('touchmove', function (e) {
                 e.preventDefault()

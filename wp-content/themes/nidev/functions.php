@@ -26,7 +26,6 @@ function urframework_enqueue_global() {
 
 if (!is_admin()) {
     add_action('wp_enqueue_scripts', 'urframework_enqueue_jquery');
-    add_action('wp_footer', 'urframework_enqueue_global', 19);
 }
 
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
