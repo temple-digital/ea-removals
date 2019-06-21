@@ -1,5 +1,4 @@
 <?php
-
 // Contact details
 function contact_shortcode() {
     ob_start();
@@ -7,5 +6,3 @@ function contact_shortcode() {
     return ob_get_clean();
   }
   add_shortcode('contact-details', 'contact_shortcode');
-
-?>

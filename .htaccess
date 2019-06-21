@@ -52,3 +52,9 @@ AddOutputFilterByType DEFLATE application/xhtml+xml
 AddOutputFilterByType DEFLATE application/rss+xml
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
+
+Redirect 301 /contact-us /contact
+Redirect 301 /the-company /
+Redirect 301 /uncategorized/hello-world /
+Redirect 301 /author/admin /
+Redirect 301 /category/uncategorized /

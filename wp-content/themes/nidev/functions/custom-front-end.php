@@ -1,5 +1,4 @@
 <?php
-
 add_image_size( 'thumbnail', 200, 200, true );
 add_image_size('full-bleed', 1800, 750, true);
 add_image_size('square640', 640, 640, true);
