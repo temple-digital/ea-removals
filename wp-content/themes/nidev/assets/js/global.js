@@ -66,7 +66,7 @@ jQuery(document).ready(function ($) {
             autoHeight: true,
             keyboardNavEnabled: true,
             autoPlay: {
-                delay:	3000,
+                delay:	5000,
                 enabled: true,
                 pauseOnHover: false
             }
