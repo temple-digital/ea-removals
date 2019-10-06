@@ -18,6 +18,23 @@ add_action( 'wp_enqueue_scripts', 'custom_styles' );
 add_action( 'wp_enqueue_scripts', 'enqueue_jquery' );
 add_action( 'wp_footer', 'custom_scripts' );
 
+ // Stop wordpress and plugin updates
+ function remove_core_updates() {
+	global $wp_version;
+
+	return (object) array(
+		'last_checked'    => time(),
+		'version_checked' => $wp_version,
+		'updates'         => array()
+	);
+}
+
+// Block updates
+if ( $remove_updates ) {
+	remove_action( 'load-update-core.php', 'wp_update_plugins' );
+	add_filter( 'pre_site_transient_update_core', 'remove_core_updates' );
+	add_filter( 'pre_site_transient_update_plugins', 'remove_core_updates' );
+}
 
 locate_template('functions/custom-post-types.php', TRUE);
 
