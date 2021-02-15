@@ -21,6 +21,6 @@
     </ul>
 
     <ul>
-        <li><span>FB: </span><a href="https://<?php echo $messenger; ?>" target="_blank">Facebook Messenger</a></li>
+        <li><span>FB: </span><a href="<?php echo $messenger; ?>" target="_blank">Facebook Messenger</a></li>
     </ul>
 </div>

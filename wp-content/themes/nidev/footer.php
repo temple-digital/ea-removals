@@ -1,6 +1,7 @@
 <?php 
 	$telephone = get_field('telephone', 'option');
     $email = get_field('email', 'option');
+    $messenger = get_field('facebook_messenger', 'option');
 ?>
   
   
@@ -25,7 +26,7 @@
                         <h3>Get In Touch</h3>
                         <p><span>T: </span><a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a></p>
                         <p><span>E: </span><a href="mailto:<?php echo $email; ?>?subject=Removal enquiry from Website""><?php echo $email; ?></a></p>
-                        <p><span>FB: </span><a href="https://<?php echo $messenger; ?>" target="_blank">Facebook Messenger</a></p>
+                        <p><span>FB: </span><a href="<?php echo $messenger; ?>" target="_blank">Facebook Messenger</a></p>
                         <p><a href="/privacy-policy">Privacy Policy</a></p>
                     </div>
 
